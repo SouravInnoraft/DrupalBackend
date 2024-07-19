@@ -41,12 +41,12 @@ class SettingsController extends ControllerBase {
       $uid = $this->currentUser->id();
       $build = [
         '#markup' => $this->t("<h3>Hey this is me {$name} I have a user-id {$uid} </h3>
-                                🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱"),
+                                "),
       ];
     }
     else {
       $build = [
-        '#markup' => $this->t("<h3>Noob der permission thake na</h3>"),
+        '#markup' => $this->t("<h3>Permission Denied</h3>"),
       ];
     }
 
