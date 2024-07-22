@@ -1,4 +1,4 @@
-name: 'My Custom Module'
+name: 'Display module custom'
 type: module
 description: 'Creates a page showing "Sourav".'
 package: Custom
