@@ -8,8 +8,17 @@ use Drupal\Core\Session\AccountInterface;
 
 class SettingsController extends ControllerBase {
 
+  /**
+   * Instance variable for storing current user.
+  */
   protected $currentUser;
 
+  /**
+   * Constructor function for initializing $currentUser.
+   *
+   * @param AccountInterface $currentUser
+   *    The current user.
+   */
   public function __construct(AccountInterface $currentUser) {
     $this->currentUser = $currentUser;
   }
