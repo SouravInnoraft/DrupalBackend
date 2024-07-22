@@ -23,6 +23,7 @@ function hook_basic_entity_view(array &$build, \Drupal\Core\Entity\EntityInterfa
       '#weight' => 100,
       '#cache' => [
         'contexts' => ['session'],
+        'max' => 0,
       ],
     ];
     $build['#cache']['contexts'][] = 'user';
