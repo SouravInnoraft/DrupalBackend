@@ -2,4 +2,4 @@ name: 'hook_basic'
 type: module
 description: 'This is Sourav Hook.'
 package: Sourav Modules
-core_version_requirement: ^10 || ^11
+core_version_requirement: ^10
