@@ -5,11 +5,20 @@ namespace Drupal\mymodule\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Session\AccountInterface;
 
+/**
+ * Class for displaying name of current user.
+ */
 
 class SettingsController extends ControllerBase {
 
+  // Instance variable for storing current user.
   protected $currentUser;
 
+  /**
+   * Constructor function for initializing $currentUser.
+   *
+   * @param AccountInterface $currentUser
+   */
   public function __construct(AccountInterface $currentUser) {
     $this->currentUser = $currentUser;
   }
@@ -24,7 +33,6 @@ class SettingsController extends ControllerBase {
     $build = [
       '#markup' => $this->t('This is the content of MyModule settings page.'),
     ];
-
     return $build;
   }
 
@@ -49,7 +57,6 @@ class SettingsController extends ControllerBase {
         '#markup' => $this->t("<h3>Permission Denied</h3>"),
       ];
     }
-
     return $build;
   }
 }
