@@ -1,39 +1,25 @@
 <?php
 
+use Drupal\Core\Cache\Cache;
+
 /**
- * Function to display number of times a page is visited.
- *
- * @param array $build
- *   An associative array representing the renderable elements of the entity.
- * @param \Drupal\Core\Entity\EntityInterface $entity
- *   The entity object whose view is being built.
- * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
- *   The display configuration object used to build the entity view.
- * @param mixed $view_mode
- *   The view mode of settings.
+ * Implements hook_basic_entity_view().
  */
 
 function hook_basic_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, mixed $view_mode) {
   // Check if the entity is a node.
   if ($entity->getEntityTypeId() === 'node') {
-    // Get the current session.
     $session = \Drupal::request()->getSession();
-    // Get the node ID.
     $nid = $entity->id();
-    // Get the current view count from session, default to 0 if not set.
-    $count = $session->get('node_view_count_' . $nid, 0);
-    // Increment the count for each page refresh.
-    $count++;
-    // Store the updated count in the session.
-    $session->set('node_view_count_' . $nid, $count);
-
-    // Add a render element to display the view count.
-    $build['view_count'] = [
-      '#markup' => '<p>This node has been viewed ' . $count . ' times in this session.</p>',
-      '#weight' => 100, // Adjust weight to control display order.
+    $build['#cache'] = [
+      '#cache' => [
+        'tags' => ['node:' . $nid,],
+      ],
     ];
-
-    // Optionally, display a status message using the Messenger service.
+    $count = $session->get('node_view_count_' . $nid, 0);
+    $count++;
+    Cache::invalidateTags(['node:' . $nid]);
+    $session->set('node_view_count_' . $nid, $count);
     \Drupal::messenger()->addStatus(t('This node has been viewed @count times in this session.', ['@count' => $count]));
   }
 }
