@@ -1,0 +1,5 @@
+name: 'My Custom Module'
+type: module
+description: 'Creates a page showing "Sourav".'
+package: Custom
+core_version_requirement: ^10
