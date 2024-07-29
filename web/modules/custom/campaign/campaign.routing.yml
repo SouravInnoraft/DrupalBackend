@@ -1,0 +1,12 @@
+campaign.defaultSettings:
+  path: '/campaign'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\campaign\Controller\CampaignController::contentStatic'
+campaign.settings:
+  path: '/campaign/{count}'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\campaign\Controller\CampaignController::contentVariable'
+  requirements:
+    _permission: 'custom permission'
