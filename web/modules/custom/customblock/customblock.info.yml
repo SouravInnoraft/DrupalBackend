@@ -1,6 +1,6 @@
 name: 'customblock'
 type: module
-description: 'This is a module for custom block'
+description: 'This is a module for custom block.'
 package: Custom
 core_version_requirement: ^10
 regions: header
