@@ -1,7 +1,0 @@
-services:
-  example.route_subscriber:
-    class: Drupal\campaign\Routing\AlternateRoute
-    tags:
-      - { name: event_subscriber }
-  custom_access:
-     class: Drupal\campaign\Access\AccessControlHandler
