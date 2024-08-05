@@ -15,14 +15,12 @@ use Drupal\Core\Block\BlockBase;
  *   category = @Translation("Custom"),
  * )
  */
-class CustomBlock extends BlockBase
-{
+class CustomBlock extends BlockBase {
 
   /**
    * {@inheritdoc}
    */
-  public function build()
-  {
+  public function build() {
     $current_user = \Drupal::currentUser();
     $name = $current_user->getDisplayName();
     // $role = !empty($roles) ? reset($roles) : 'Guest';
