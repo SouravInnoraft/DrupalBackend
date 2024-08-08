@@ -1,0 +1,16 @@
+formtask.example:
+  path: '/formtask'
+  defaults:
+    _title: 'Example'
+    _form: 'Drupal\formtask\Form\ExampleForm'
+
+  requirements:
+    _permission: 'access content'
+
+formtask.exampleValue:
+  path: '/formtask/values'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\formtask\Controller\FormtaskController::content'
+  requirements:
+    _permission: 'access content'

@@ -23,8 +23,6 @@ class CustomBlock extends BlockBase {
   public function build() {
     $current_user = \Drupal::currentUser();
     $name = $current_user->getDisplayName();
-    // $role = !empty($roles) ? reset($roles) : 'Guest';
-
     return [
       '#markup' => $this->t('Welcome @name', ['@name' => $name]),
     ];

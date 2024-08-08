@@ -1,0 +1,5 @@
+name: 'formtask'
+type: module
+description: 'Form for collection company data'
+package: Custom
+core_version_requirement: ^10
