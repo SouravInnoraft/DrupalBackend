@@ -1,0 +1,5 @@
+name: 'Customservice'
+type: module
+description: 'Module displaying form data using services and dependency injection.'
+package: Custom
+core_version_requirement: ^10

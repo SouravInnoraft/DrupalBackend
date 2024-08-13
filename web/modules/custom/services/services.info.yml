@@ -1,0 +1,5 @@
+name: 'services'
+type: module
+description: 'module for storing my services'
+package: Custom
+core_version_requirement: ^10

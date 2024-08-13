@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Contains customservice schema definitions.
+ */
+/**
+ * Implements hook_schema().
+ */
+function customservice_schema() {
+  $schema['company_details'] = [
+    'description' => 'Contains company details.',
+    'fields' => [
+      'id' => [
+        'description' => 'Holds the id',
+        'type' => 'serial',
+        'not null' => true,
+        'unsigned' => true,
+      ],
+      'parent_company' => [
+        'description' => 'Parent company name',
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => true,
+      ],
+      'labelone' => [
+        'description' => 'Label one',
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => true,
+      ],
+      'valueone' => [
+        'description' => 'value of label one',
+        'type' => 'int',
+        'not null' => true,
+      ],
+      'labeltwo' => [
+        'description' => 'Label two',
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => true,
+      ],
+      'valuetwo' => [
+        'description' => 'value of label two',
+        'type' => 'int',
+        'not null' => true,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+  return $schema;
+}
