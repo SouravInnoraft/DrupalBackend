@@ -4,4 +4,4 @@ customservice.example:
     _title: 'Example'
     _form: 'Drupal\customservice\Form\ExampleForm'
   requirements:
-    _permission: 'access content'
+    _permission: 'access content.'
