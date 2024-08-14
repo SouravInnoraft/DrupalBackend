@@ -1,4 +1,0 @@
-services:
-  services.example:
-    class: Drupal\services\Example
-    arguments: ['@current_user']

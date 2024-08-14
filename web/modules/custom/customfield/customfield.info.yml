@@ -1,0 +1,7 @@
+name: 'customfield'
+type: module
+description: 'Creating Rgb color and displaying it.'
+package: Custom
+core_version_requirement: ^10 || ^11
+permission:
+  

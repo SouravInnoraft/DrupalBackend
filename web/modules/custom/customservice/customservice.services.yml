@@ -1,4 +1,0 @@
-services:
-  customservice.Example:
-    class: Drupal\customservice\Example
-    arguments: ['@database']
