@@ -1,0 +1,73 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.movie.body
+    - field.field.node.movie.movie_image
+    - node.type.movie
+  module:
+    - file
+    - path
+    - text
+    - image
+  enforced:
+    module:
+      - movie
+_core:
+  default_config_hash: qZE-qJ04DTTNggVVQdVOPQmpE_I69GQ_LqB32kXivVg
+id: node.movie.default
+targetEntityType: node
+bundle: movie
+mode: default
+content:
+  body:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: { }
+    type: text_textarea_with_summary
+  movie_image:
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+    type: image_image
+  movie_price:
+    type: number
+    weight: 4
+    settings: { }
+    third_party_settings: {  }
+  path:
+    weight: 5
+    settings: { }
+    third_party_settings: { }
+    type: path
+  promote:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: { }
+    type: boolean_checkbox
+  sticky:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: { }
+    type: boolean_checkbox
+  title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: { }
+    type: string_textfield
+  uid:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: { }
+    type: entity_reference_autocomplete
+hidden: { }

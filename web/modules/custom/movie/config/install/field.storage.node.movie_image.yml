@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - image
+  enforced:
+    module:
+      - movie
+entity_type: node
+field_name: movie_image
+id: node.movie_image
+type: image
+settings: {  }
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

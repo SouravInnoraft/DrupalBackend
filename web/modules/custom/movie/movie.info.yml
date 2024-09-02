@@ -1,0 +1,5 @@
+name: 'movie'
+type: module
+description: 'Module for creating and displaying movie content type'
+package: Custom
+core_version_requirement: ^10 || ^11

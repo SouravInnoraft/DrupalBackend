@@ -1,0 +1,7 @@
+movie.settings:
+  path: '/admin/config/system/settings'
+  defaults:
+    _title: 'Settings'
+    _form: 'Drupal\movie\Form\SettingsForm'
+  requirements:
+    _permission: 'administer site configuration'

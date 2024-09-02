@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function movie_preprocess_node(&$variables) {
+  if ($variables['node']->getType() == 'movie') {
+    $config = \Drupal::config('movie.settings');
+    $budget_amount = $config->get('budget_amount');
+
+    // Assuming there's a field 'field_movie_budget' on the movie content type
+    $movie_budget = $variables['node']->get('movie_price')->value;
+
+    if ($movie_budget <= $budget_amount) {
+      $variables['content']['#prefix'] = '<h1 class="budget-friendly">This movie is budget-friendly!</h1>';
+    }
+    elseif($movie_budget > $budget_amount) {
+      $variables['content']['#prefix'] = '<h1 class="budget-friendly">This movie is not budget-friendly!</h1>';
+    }
+  }
+}

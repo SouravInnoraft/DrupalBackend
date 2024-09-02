@@ -1,0 +1,5 @@
+name: 'awards'
+type: module
+description: 'Modules for listing awards'
+package: Custom
+core_version_requirement: ^10 || ^11

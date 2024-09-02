@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.movie_price
+    - node.type.movie
+  enforced:
+    module:
+      - movie
+id:  node.movie.movie_price
+field_name: movie_price
+entity_type: node
+bundle: movie
+label: 'price'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: '₹'
+  suffix: ''
+field_type: decimal
